@@ -1,0 +1,36 @@
+@import url('reset.css');
+
+.grid-4x4 {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "one .     .     .    "
+                         "one three three three"
+                         "one .     two   two  "
+                         "one .     two   two  ";
+    height: 600px;
+}
+
+@media screen and (max-width: 599.9px) {
+    .grid-4x4 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: initial;
+        grid-template-areas: "one two" "three three";
+    }
+}
+
+.one {
+    grid-area: one;
+    background-color: gold;
+}
+
+.two {
+    grid-area: two;
+    background-color: salmon;
+}
+
+.three {
+    grid-area: three;
+    background-color: turquoise;
+}
