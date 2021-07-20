@@ -2,27 +2,27 @@
 
 .grid-4x4 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr [start] 1fr 1fr [end] 1fr;
+    grid-template-rows: [first-row] 1fr 1fr 1fr [minus1] 1fr [last-row];
     height: 600px;
     margin-top: 20px;
 }
 
 .row-15-col-35 {
-    grid-row: 1 / 5;
+    grid-row: first-row / last-row;
     grid-column: 3 / 5;
     background-color: gold;
 }
 
 .row-14-col-1 {
-    grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-start: first-row;
+    grid-row-end: minus1;
     grid-column: 1;
     background-color: salmon;
 }
 
 .row-2-col-23 {
     grid-row: 2;
-    grid-column: 2 / 4;
+    grid-column: start / end;
     background-color: turquoise;
 }
