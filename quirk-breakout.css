@@ -1,0 +1,23 @@
+@import url('reset.css');
+
+.grid {
+    display: grid;
+    grid-template-columns: auto 200px;
+    gap: 20px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.wrapper-min {
+    min-width: 0;
+}
+
+pre {
+    overflow: auto;
+    margin: 0; /* just for aesthetics, not related to the quirk */
+}
+
+.sidebar {
+    padding: 20px;
+    background-color: salmon;
+}

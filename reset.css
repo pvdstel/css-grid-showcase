@@ -80,6 +80,12 @@ body {
 
 code, pre {
   font-family: Consolas, Inconsolata, "SF Mono", "Ubuntu Mono", Monaco, monospace;
+  background-color: lightgray;
+  padding: 1px 4px;
+}
+
+pre {
+  padding: 5px;
 }
 
 .back {

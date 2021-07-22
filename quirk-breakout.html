@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid quirk</title>
+    <link rel="stylesheet" href="quirk-breakout.css">
+</head>
+
+<body>
+    <script>
+        function handleToggle(e) {
+            const el = document.getElementById('wrapper');
+            if (e.currentTarget.checked) {
+                el.classList.add('wrapper-min');
+            } else {
+                el.classList.remove('wrapper-min');
+            }
+        }
+    </script>
+
+    <p class="back"><a href="index.html">🡰 back to overview</a></p>
+
+    <h1>Quirk: breakout</h1>
+    <p>The sidebar (probably off-screen) should be 200px wide. Turning on the fix simply sets <code>min-width</code> on the wrapper to 0.</p>
+
+    <label>
+        <input id='fix-toggle' type="checkbox" />
+        Toggle fix
+    </label>
+
+    <div class="grid">
+        <div id="wrapper">
+            <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin purus enim, ultrices id urna ut, vestibulum condimentum mi. Curabitur egestas porttitor molestie. Phasellus pretium enim urna, at semper mauris commodo vel. Fusce ac tortor aliquam, dignissim lacus id, volutpat justo. Maecenas ut quam nec justo condimentum finibus. Donec id molestie tellus. Nam et sem lacus. Sed venenatis placerat sagittis. In hac habitasse platea dictumst. Proin suscipit malesuada bibendum. Aliquam in urna et turpis imperdiet accumsan. Vivamus nec purus vitae tellus dapibus bibendum. Suspendisse convallis quam nec erat tincidunt, vitae pulvinar magna dignissim. Vivamus nec vulputate odio. Fusce congue porta odio, at convallis nulla pulvinar auctor.</pre>
+        </div>
+        <div class="sidebar">Sidebar</div>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('fix-toggle');
+        toggle.addEventListener('change', handleToggle);
+        toggle.checked = false;
+    </script>
+</body>
+
+</html>
