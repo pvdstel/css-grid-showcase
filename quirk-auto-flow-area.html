@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid quirk</title>
+    <link rel="stylesheet" href="quirk-auto-flow-area.css">
+</head>
+
+<body>
+    <script>
+        function handleToggle(e) { 
+            const el = document.getElementById('bug');
+            if (e.currentTarget.checked) {
+                el.classList.add('bugged');
+            } else {
+                el.classList.remove('bugged');
+            }
+        }
+    </script>
+
+    <p class="back"><a href="index.html">🡰 back to overview</a></p>
+
+    <h1>Quirk: auto-flow with area demo</h1>
+    <p>Turning on the quirk simply sets <code>grid-area</code> on the second element.</p>
+
+    <label>
+        <input id='bug-toggle' type="checkbox" />
+        Toggle quirk
+    </label>
+
+    <div class="grid-4x4">
+        <div class="item"><p>🌺</p><button>Add to cart</button></div>
+        <div id="bug" class="item"><p>💐</p><button>Add to cart</button></div>
+        <div class="item"><p>🌷</p><button>Add to cart</button></div>
+        <div class="item"><p>🌹</p><button>Add to cart</button></div>
+        <div class="item"><p>🌻</p><button>Add to cart</button></div>
+        <div class="item"><p>💮</p><button>Add to cart</button></div>
+        <div class="item"><p>🌼</p><button>Add to cart</button></div>
+        <div class="item"><p>🥀</p><button>Add to cart</button></div>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('bug-toggle');
+        document.getElementById('bug-toggle').addEventListener('change', handleToggle);
+        toggle.checked = false;
+    </script>
+</body>
+
+</html>
