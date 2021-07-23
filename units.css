@@ -1,0 +1,34 @@
+@import url('reset.css');
+
+.grid-with-min {
+    display: grid;
+    min-height: 200px;
+    grid-template-columns: min-content minmax(100px, 1fr);
+    margin-top: 20px;
+}
+
+.grid-with-max {
+    display: grid;
+    min-height: 200px;
+    grid-template-columns: max-content minmax(100px, 1fr);
+    margin-top: 20px;
+}
+
+.grid-with-auto {
+    display: grid;
+    min-height: 200px;
+    grid-template-columns: auto minmax(100px, 1fr);
+    margin-top: 20px;
+}
+
+.grid-with-auto-and-fr {
+    display: grid;
+    min-height: 200px;
+    grid-template-columns: auto 1fr;
+    margin-top: 20px;
+}
+
+.fill {
+    background-image: url('transparent.svg');
+    background-repeat: repeat;
+}

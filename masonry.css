@@ -1,0 +1,55 @@
+@import url('reset.css');
+
+.masonry {
+    display: grid;
+    gap: 20px;
+    width: 960px;
+    margin: 20px auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry;
+}
+
+.item:nth-child(5n + 1) {
+    height: 300px;
+}
+
+.item:nth-child(5n + 2) {
+    height: 400px;
+}
+
+.item:nth-child(5n + 3) {
+    height: 350px;
+}
+
+.item:nth-child(5n + 4) {
+    height: 250px;
+}
+
+.item {
+    border: 1px solid lightgray;
+    background: lightgray; /* to highlight the masonry */
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.item p {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.item button {
+    border: none;
+    border-radius: 50px;
+    padding: 8px 16px;
+    background: purple;
+    color: white;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background: hotpink;
+}
