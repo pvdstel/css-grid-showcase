@@ -9,20 +9,24 @@
     grid-template-rows: masonry;
 }
 
+.item:nth-child(5n) {
+    height: 200px;
+}
+
 .item:nth-child(5n + 1) {
-    height: 300px;
+    height: 500px;
 }
 
 .item:nth-child(5n + 2) {
-    height: 400px;
-}
-
-.item:nth-child(5n + 3) {
     height: 350px;
 }
 
+.item:nth-child(5n + 3) {
+    height: 400px;
+}
+
 .item:nth-child(5n + 4) {
-    height: 250px;
+    height: 300px;
 }
 
 .item {
